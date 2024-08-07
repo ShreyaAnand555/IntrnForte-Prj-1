@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Product listing</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #9f21f3;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(15, 7, 7);
+            padding-right: 20px;
+            padding: 20px;
+        }
+        nav {
+            display: flex;
+            background-color: rgb(102, 124, 233);
+            align-items: center;
+            justify-content: center;
+            
+        }
+        button {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(193, 175, 71);
+            color: rgb(255, 255, 255);
+            border-color: green;
+            display: flex;
+            position: relative;
+            left: 400px;
+        }
+        .artical {
+            padding-left: 150px;
+            color: rgb(248, 246, 246);
+            background-image: url("Festive.jpg");
+            padding-bottom: 300px;
+            background-size: cover;
+            padding-top: 200px;
+            position: sticky;
+        }
+        h4 {
+            font-family: 'Gabarito', sans-serif;
+            font-size: xx-large;
+        }
+        h1 {
+            font-size: 70px;
+            animation: find new products 2s ease-in-out;
+        }
+        p {
+            font-size: larger;
+            color: beige;
+            animation: para 2s ease-in-out;
+        }
+        .ar {
+            background-color: rgba(0, 0, 0, 0.15);
+            margin-right: 300px;
+            padding-left: 20px;
+        }
+        a:hover {
+            background-color: rgb(71, 199, 16);
+            color: rgb(255, 51, 0);
+        }
+        button:hover {
+            background-color: rgb(71, 199, 16);
+            color: blue;
+            cursor: pointer;
+        }
+        #fi {
+            height: 40px;
+            width: 40px;
+            border-radius: 100px;
+            float: left;
+            padding: 2px;
+            margin: 0px;
+        }
+        @keyframes findproduct {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        @keyframes para {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        .count-animation {
+            animation: countUp 1s;
+        }
+        @keyframes countUp {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+                counter-increment: productCount;
+            }
+        }
+        h4::after {
+            content: counter(productCount);
+        }
+        #so {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+        select {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        button#findshopButton {
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: rgb(71, 193, 71);
+            color: white;
+            border-color: green;
+            font-size: 16px;
+        }
+        #findshopButton:hover{
+            box-shadow: 0 0 10px aqua;
+            background-color: green;
+            color:aliceblue;
+
+        }
+        #so select:first-child {
+            margin-right: 10px;
+        }
+        input[type="button"]{
+            padding: 10px 20px;
+            background-color: rgb(71, 193, 71);
+            color: white;
+            border-radius: 20px;
+            
+        }
+       #bo:hover{
+            background-color: green;
+color: aliceblue;
+border-radius: 20px;
+font-size: large;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Lato&family=Orbitron:wght@400;600&family=Oswald:wght@700&family=Teko&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fd">
+        <nav>
+            <img src="UR logo.png" alt="inf" id="fi">
+            <a href="">Home</a>
+            <a href="">search products</a>
+            <a href="">Cart</a>
+            <a href="">Contact</a>
+            <a href="">Login</a>
+            <div id="so">
+            <select>
+                <option>Menu</option>
+            <option>Orders</option>
+            <option>Buy Again</option>
+            <option>Accounts</option>
+            <option>Lists</option>
+        </select>
+        </div>
+        </nav>
+        <div class="artical">
+            <div class="ar">
+                <h4 class="count-animation">+<span style="counter-reset: jobCount 0;">Products listed:</span></h4>
+                <h1>Find your Favourite Outfit</h1>
+                <p>We Offer you colourful and amazing products please check out here</p>
+                <button id="findshopButton"><a href="index.html">Search products</a></button>
+            </div>
+        </div>
+    </div>
+    <div id="so">
+        <select>
+            <option> Search Keyword</option>
+            <option>Electronics</option>
+            <option>Clothing</option>
+            <option>Accessories</option>
+           <option>Beauty Products</option>
+        </select>
+        <select>
+            <option>Location</option>
+            <option>Kerala</option>
+            <option>TamilNadu</option>
+            <option>Banglore</option>
+            <option>Mumbai</option>
+            <option>Hyderabad</option>
+            <option>Andhra Pradesh</option>
+        </select>
+        <select>
+            <option>Filters</option>
+            <option>Prime&delivery</option>
+            <option>Category</option>
+            <option>Brands</option>
+            <option>Price and Deals</option>
+            <option>Customer Reviews</option>
+            <option>sort by</option>
+            <option>Item condition</option>
+            <option>colour</option>
+            <option>Theme</option>
+            <option>height</option>
+        </select>
+        <input type="button" value="shop now" id="bo">
+    </div>
+    <script>
+        window.onload = function() {
+            var productCountElement = document.querySelector('.count-animation');
+            var productCount = 10;
+            var targetCount = 4536;
+            function updateCount() {
+                productCountElement.innerHTML = "+" + productCount + " Products listed";
+                productCount++;
+                if (productCount <= targetCount) {
+                    setTimeout(updateCount, 10);
+                }
+            }
+            updateCount();
+        };
+    </script>
+</body>
+</html>
